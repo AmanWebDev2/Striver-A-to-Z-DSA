@@ -1,28 +1,32 @@
+/**
+ * Two pointer approach
+ * Time Complexity: O(x) + O(n-x) = O(n);
+ * Space Complexity: O(1);
+ */
+
 function moveZeros(arr:number[], n:number) {
-    for(let j=0; j<n;) {
-
-        if(arr[j] != 0) {
-            j++;
-        }
-
-        if(j==n-1) {
+     let j = -1;
+    //  T.C = O(x);
+     for(let i=0; i<n; i++) {
+        if(arr[i] == 0) {
+            j = i;
             break;
         }
+     }
 
-        let i = j+1;
-
-        while(arr[i] ==0) {
-            i++;
-            if(i>n-1){
-                return
-            }
+    //  array does not contains zeros
+     if(j==-1) {
+        return;
+     }
+    // T.C = O(n-x);
+     for(let i = j+1; i<n; i++) {
+        if(arr[i] != 0) {
+            let temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j++;
         }
-        let temp = arr[i];
-        arr[i] = arr[j];
-        arr[j] = temp;
-
-        j++;
-    }
+     }
 }
 
 let arr:number[] = [3,5,0,0,4];
