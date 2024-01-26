@@ -22,4 +22,6 @@ func main() {
 	// printAllDivisor(36)
 	// printAllDivisorBetter(36)
 
+	// fmt.Println(getGcd(9, 12))
+	// fmt.Println(getGcdByEuclidean(9, 12))
 }
