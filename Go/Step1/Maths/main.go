@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func main() {
 	// digits := countDigit2(1234567890)
 	// fmt.Println(digits)
@@ -15,6 +13,13 @@ func main() {
 	// reverse := reverseNum(1234)
 	// fmt.Println(reverse)
 
-	ans := isArmstrong(1533)
-	fmt.Println(ans)
+	// ans := isArmstrong(1533)
+	// fmt.Println(ans)
+
+	// ans := isPalindrome(12321)
+	// fmt.Println(ans)
+
+	// printAllDivisor(36)
+	// printAllDivisorBetter(36)
+
 }
