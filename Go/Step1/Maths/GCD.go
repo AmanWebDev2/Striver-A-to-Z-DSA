@@ -16,7 +16,7 @@ func getGcd(n1, n2 int) int {
 
 // Euclidean Algo
 // Time Complexity: O(Math.log(phie)min(a,b))
-func getGcdByEuclidean(n1, n2 int) int {
+func GetGcdByEuclidean(n1, n2 int) int {
 
 	for n1 > 0 && n2 > 0 {
 		if n1 > n2 {
