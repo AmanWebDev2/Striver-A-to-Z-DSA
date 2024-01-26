@@ -9,6 +9,12 @@ func main() {
 	// fact := factorial(5)
 	// fmt.Println(fact)
 
-	prime := isPrimeBetter(7)
-	fmt.Println(prime)
+	// prime := isPrimeBetter(7)
+	// fmt.Println(prime)
+
+	// reverse := reverseNum(1234)
+	// fmt.Println(reverse)
+
+	ans := isArmstrong(1533)
+	fmt.Println(ans)
 }

@@ -17,6 +17,8 @@ func isPrime(num int) bool {
 	return false
 }
 
+// Time Complexity: O(Sqrt(N))
+
 func isPrimeBetter(num int) bool {
 	count := 0
 	for i := 1; i*i <= num; i++ {
