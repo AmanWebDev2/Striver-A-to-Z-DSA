@@ -38,7 +38,32 @@ function maxSubarrayBetter(arr:number[], n:number) {
     return max;
 }
 
+// Kadane's Algorithm
+function maxSubarrayOptimal(arr:number[],n:number) {
+    let sum = 0;
+    let max = arr[0];
+    let ansStart = -1;
+    let ansEnd = -1;
+    for(let i=0; i<n; i++) {
+        if (sum == 0) {
+            ansStart = i;
+        }
+        sum+=arr[i];
+        if(sum > max) {
+            max = sum;
+            ansEnd = i;
+        };
+        if(sum<0) {
+            sum = 0;
+        }
+    }
+    for(let i=ansStart; i<=ansEnd; i++) {
+        console.log(arr[i]);
+    }
+    return max;
+}
+
 const arr = [-2,-3,4,-1,-2,1,5,-3];
 const n = arr.length;
 
-console.log(maxSubarrayBrute(arr,n))
+console.log(maxSubarrayOptimal(arr,n))
